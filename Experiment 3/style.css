@@ -1,0 +1,423 @@
+/* Step 5: CSS styles for colours, fonts, spacing and layout */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #2d3025;
+    background: #fffdf7;
+    line-height: 1.65;
+}
+
+img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+a {
+    text-decoration: none;
+}
+
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    padding: 20px 8%;
+    background: #fffdf7;
+}
+
+.brand {
+    color: #253d2b;
+    font-size: 1.55rem;
+    font-weight: 800;
+    letter-spacing: -0.8px;
+    white-space: nowrap;
+}
+
+.brand span {
+    color: #b87532;
+    margin-left: 4px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+nav a {
+    color: #505749;
+    font-size: 0.92rem;
+    font-weight: 600;
+}
+
+nav a:hover,
+.text-link:hover {
+    color: #b87532;
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 0.9fr;
+    align-items: center;
+    gap: 55px;
+    padding: 65px 8% 80px;
+    background: #f4f0e5;
+}
+
+.hero-text {
+    max-width: 590px;
+}
+
+.eyebrow {
+    margin-bottom: 12px;
+    color: #a5682d;
+    font-size: 0.76rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #263d2b;
+    font-size: clamp(2.6rem, 5vw, 4.35rem);
+    line-height: 1.1;
+    letter-spacing: -2px;
+}
+
+h1 span {
+    color: #a5682d;
+}
+
+.description {
+    max-width: 520px;
+    margin-bottom: 26px;
+    color: #626656;
+    font-size: 1.04rem;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 13px;
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 22px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    font-weight: 700;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+}
+
+.button-primary {
+    color: white;
+    background: #315b39;
+}
+
+.button-primary:hover {
+    background: #23452a;
+}
+
+.button-outline {
+    color: #315b39;
+    border-color: #315b39;
+    background: transparent;
+}
+
+.trust-note {
+    margin-top: 23px;
+    color: #777967;
+    font-size: 0.82rem;
+}
+
+.hero-image {
+    position: relative;
+}
+
+.hero-image img {
+    height: 400px;
+    border-radius: 48% 48% 8px 8px;
+    box-shadow: 0 18px 35px #263d2b20;
+}
+
+.image-label {
+    position: absolute;
+    right: -15px;
+    bottom: 22px;
+    padding: 12px 18px;
+    border-radius: 5px;
+    color: #263d2b;
+    background: #fffdf7;
+    font-weight: 700;
+    box-shadow: 0 8px 24px #263d2b18;
+}
+
+.section {
+    padding: 78px 8%;
+}
+
+.section-title {
+    max-width: 650px;
+    margin: 0 auto 38px;
+    text-align: center;
+}
+
+.section-title h2,
+.story-text h2,
+.contact h2 {
+    margin-bottom: 12px;
+    color: #263d2b;
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    line-height: 1.2;
+    letter-spacing: -0.8px;
+}
+
+.section-title > p:last-child,
+.contact > p:not(.eyebrow) {
+    color: #707464;
+}
+
+.benefit-grid,
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.benefit-card {
+    padding: 28px 24px;
+    border: 1px solid #e9e4d7;
+    border-radius: 8px;
+    background: #ffffff;
+}
+
+.icon {
+    display: grid;
+    width: 48px;
+    height: 48px;
+    margin-bottom: 16px;
+    place-items: center;
+    border-radius: 50%;
+    color: #315b39;
+    background: #edf1e8;
+    font-size: 1.5rem;
+}
+
+.benefit-card h3,
+.product-info h3 {
+    margin-bottom: 7px;
+    color: #263d2b;
+}
+
+.benefit-card p,
+.product-info p {
+    color: #707464;
+    font-size: 0.94rem;
+}
+
+.collection {
+    background: #f4f0e5;
+}
+
+.product-card {
+    overflow: hidden;
+    border-radius: 8px;
+    background: #fffdf7;
+    box-shadow: 0 8px 22px #263d2b0d;
+}
+
+.product-card img {
+    height: 225px;
+    transition: transform 0.3s;
+}
+
+.product-card:hover img {
+    transform: scale(1.035);
+}
+
+.product-info {
+    padding: 22px;
+}
+
+.text-link {
+    display: inline-block;
+    margin-top: 14px;
+    color: #315b39;
+    font-size: 0.9rem;
+    font-weight: 800;
+}
+
+.story {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 55px;
+    padding: 78px 8%;
+}
+
+.story-image img {
+    height: 390px;
+    border-radius: 8px;
+}
+
+.story-text p:not(.eyebrow) {
+    margin-bottom: 16px;
+    color: #626656;
+}
+
+.story-text .button {
+    margin-top: 8px;
+}
+
+.contact {
+    text-align: center;
+    background: #e9eddf;
+}
+
+.contact > p:not(.eyebrow) {
+    margin-bottom: 24px;
+}
+
+.site-footer {
+    padding: 35px 8%;
+    color: #dce4d7;
+    background: #263d2b;
+    text-align: center;
+}
+
+.footer-brand {
+    display: inline-block;
+    margin-bottom: 8px;
+    color: #ffffff;
+}
+
+.site-footer p {
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+
+.site-footer small {
+    display: block;
+    margin-top: 18px;
+    color: #b8c5b3;
+}
+
+/* Step 13: Media queries make the webpage responsive on tablets and phones */
+@media (max-width: 850px) {
+    .site-header {
+        padding: 18px 5%;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    nav {
+        gap: 16px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 52px 6%;
+        gap: 35px;
+    }
+
+    .hero-text {
+        max-width: 700px;
+    }
+
+    .hero-image {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .hero-image img {
+        height: 350px;
+    }
+
+    .section,
+    .story {
+        padding: 60px 6%;
+    }
+
+    .story {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .story-image img {
+        height: 320px;
+    }
+}
+
+@media (max-width: 600px) {
+    .site-header {
+        padding: 16px 5%;
+    }
+
+    nav {
+        width: 100%;
+        gap: 10px 16px;
+    }
+
+    nav a {
+        font-size: 0.84rem;
+    }
+
+    .hero {
+        padding: 42px 5%;
+    }
+
+    h1 {
+        font-size: 2.65rem;
+        letter-spacing: -1.3px;
+    }
+
+    .hero-image img {
+        height: 280px;
+    }
+
+    .image-label {
+        right: 8px;
+        bottom: 12px;
+        font-size: 0.82rem;
+    }
+
+    .section,
+    .story {
+        padding: 48px 5%;
+    }
+
+    .benefit-grid,
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product-card img {
+        height: 240px;
+    }
+
+    .story-image img {
+        height: 260px;
+    }
+
+    .button {
+        padding: 11px 16px;
+        font-size: 0.9rem;
+    }
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <h1>Interactive Image Gallery</h1>
+        <p>Explore beautiful moments</p>
+    </header>
+
+    <main class="container">
+        <section class="gallery-section" aria-label="Photo gallery">
+            <div class="section-heading">
+                <h2>My Gallery</h2>
+                <p>Click any image to open the slideshow. Use Previous, Next, or auto-play to browse.</p>
+            </div>
+
+            <div class="gallery-grid" id="galleryGrid">
+                <button class="gallery-item" data-index="0" aria-label="Mountain Escape">
+                    <img src="img1.jpg" alt="Mountain landscape" loading="lazy">
+                    <span>Mountain Escape</span>
+                </button>
+                <button class="gallery-item" data-index="1" aria-label="Pebels">
+                    <img src="img2.jpg" loading="lazy">
+                    <span>Pebels</span>
+                </button>
+                <button class="gallery-item" data-index="2" aria-label="Rain droplets">
+                    <img src="img3.jpg" alt="Rain droplets" loading="lazy">
+                    <span>Rain droplets</span>
+                </button>
+                <button class="gallery-item" data-index="3" aria-label="Quiet lake">
+                    <img src="img4.jpg" alt="Quiet lake" loading="lazy">
+                    <span>Quiet Lake</span>
+                </button>
+                <button class="gallery-item" data-index="4" aria-label="Fog">
+                    <img src="img5.jpg" alt="Fog image" loading="lazy">
+                    <span>Foggy Scenery</span>
+                </button>
+                <button class="gallery-item" data-index="5" aria-label="Sun light">
+                    <img src="img6.jpg" alt="Sun light" loading="lazy">
+                    <span>Sun Light</span>
+                </button>
+                <button class="gallery-item" data-index="6" aria-label="Open lake">
+                    <img src="img7.jpg" alt="Peaceful lake and mountains" loading="lazy">
+                    <span>Quiet Lake</span>
+                </button>
+                <button class="gallery-item" data-index="7" aria-label="Moon mountain">
+                    <img src="img8.jpg" alt="Moon mountain" loading="lazy">
+                    <span>Moon Mountain</span>
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Image slideshow">
+        <button class="close-btn" id="closeBtn" aria-label="Close slideshow">&times;</button>
+        <button class="slide-btn prev-btn" id="prevBtn" aria-label="Previous image">&#10094;</button>
+        <figure class="slide-figure">
+            <img id="slideImage" src="" alt="">
+            <figcaption id="slideCaption"></figcaption>
+        </figure>
+        <button class="slide-btn next-btn" id="nextBtn" aria-label="Next image">&#10095;</button>
+        <div class="slide-controls">
+            <button id="playBtn" class="control-btn">▶ Start auto-play</button>
+            <span id="slideCount">1 / 8</span>
+            <span class="keyboard-hint">Tip: use ← / → keys, or Esc to close.</span>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Interactive Image Gallery. All rights reserved.</p>
+    </footer>
+</body>
+</html>

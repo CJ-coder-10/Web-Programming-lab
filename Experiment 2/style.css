@@ -1,0 +1,269 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    line-height:1.6;
+    color:#111111;
+}
+
+/* Header using Flexbox */
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: rgba(12, 22, 38, 0.88);   /* Glass navy */
+    backdrop-filter: blur(8px);
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo{
+    font-size: 28px;
+    font-weight: bold;
+    color: #F8C146;    /* Warm gold */
+}
+
+nav a{
+    color: #F5F5F5;
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 20px;
+}
+
+nav a:hover{
+    color: #F8C146;
+}
+
+/* Hero Section */
+.hero{
+    height:85vh;
+    background:url("herotech.jpg");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+}
+
+.hero-text{
+    background:rgba(17, 17, 17, 0.5);
+    padding:25px;
+    border-radius:8px;
+}
+
+.hero h1{
+    font-size:48px;
+}
+
+.hero p{
+    margin:15px 0;
+    font-size:20px;
+}
+
+.btn{
+    display:inline-block;
+    background:#ffc107;
+    color:black;
+    padding:12px 20px;
+    text-decoration:none;
+    border-radius:5px;
+}
+/* About Hero */
+.about-hero{
+    height:40vh;
+    background:linear-gradient(rgba(12,22,38,0.75),
+              rgba(13,71,161,0.65)),
+              url("herotech.jpg");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+}
+
+.about-hero h1{
+    font-size:42px;
+    margin-bottom:10px;
+}
+
+.about-content{
+    background:#F4F7FC;
+    padding:60px 40px;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:30px;
+}
+
+.about-box{
+    background:white;
+    padding:30px;
+    border-radius:12px;
+    border-top:5px solid #F8C146;
+    box-shadow:0 4px 12px rgba(0,0,0,0.15);
+}
+
+.about-box h2{
+    color:#0D47A1;
+    margin-bottom:15px;
+}
+
+.about-box p{
+    color:#555;
+    line-height:1.7;
+}
+
+/* Mobile */
+@media(max-width:768px){
+    .about-content{
+        grid-template-columns:1fr;
+        padding:30px 20px;
+    }
+
+    .about-hero h1{
+        font-size:32px;
+    }
+}
+
+/* Services using Grid */
+.services{
+    padding: 60px 40px;
+    background:linear-gradient(135deg,#1A1F36,#0D47A1);
+    text-align: center;
+}
+
+.services h2{
+    color: #fafbfc;
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 25px;
+}
+
+.card{
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    border-top: 5px solid #FFC107;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.card h3{
+    color: #0D47A1;
+    margin-bottom: 10px;
+}
+
+.card:hover{
+    transform: translateY(-5px);
+    transition: 0.3s;
+}
+
+/* Contact */
+.contact{
+    padding: 60px 20px;
+    background: linear-gradient(135deg,#1A1F36,#0D47A1);
+    color: white;
+    text-align: center;
+}
+
+.contact h2{
+    font-size: 36px;
+    margin-bottom: 25px;
+}
+
+form{
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, textarea{
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+button{
+    background: #0C1626;
+    color: #fbfbfc;
+    font-weight: bold;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover{
+    background: #FFD54F;
+}
+
+/* Footer */
+footer{
+    background: #111A27;      /* Matches hero shadows */
+    color: #D6DCE5;
+    text-align: center;
+    padding: 22px;
+    border-top: 1px solid rgba(248,193,70,0.25);
+    margin-top: 0;
+}
+
+footer p{
+    margin: 5px 0;
+}
+/* Responsive Design */
+@media(max-width:768px){
+
+    header{
+        flex-direction:column;
+        gap:15px;
+        text-align:center;
+    }
+
+    nav{
+        flex-direction:column;
+    }
+
+    .hero{
+    min-height: calc(100vh - 120px);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    .hero h1{
+        font-size:32px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .grid{
+        grid-template-columns:1fr;
+    }
+
+    .services,
+    .contact{
+        padding:25px;
+    }
+}
