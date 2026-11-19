@@ -1,0 +1,23 @@
+
+body {
+    font-family: Arial;
+    text-align: center;
+    margin: 50px;
+}
+
+input, button {
+    padding: 10px;
+    margin: 5px;
+}
+
+button {
+    cursor: pointer;
+}
+
+#error {
+    color: red;
+}
+
+#weather {
+    margin-top: 20px;
+}

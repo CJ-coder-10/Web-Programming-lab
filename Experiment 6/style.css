@@ -1,0 +1,41 @@
+
+body {
+    font-family: Arial;
+    text-align: center;
+    background-color: lightgray;
+}
+
+h1 {
+    color: darkblue;
+}
+
+input, select {
+    padding: 10px;
+    margin: 10px;
+}
+
+/* ivide product list oru id aan.
+So # vech access cheyth  */
+#productList {
+    display: flex; /* ith namade div class ne sidekkum indakkum */
+    flex-wrap: wrap;/* ini side ikk sthalam kazhinja div box ne adikk indakkum */
+    justify-content: center;/* eleam center ikk vech */
+}
+
+/* ividenn adikk javascript inn edukkana elements aan */
+
+.product {
+    background-color: white;
+    width: 200px;
+    margin: 10px;
+    padding: 15px;
+    border: 1px solid gray;
+}
+
+.product h3 {
+    color: darkblue;
+}
+
+.product p {
+    color: black;
+}
